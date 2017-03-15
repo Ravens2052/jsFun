@@ -108,10 +108,10 @@ JavaScript can create new HTML events in the page -->
 
 	<!-- Uncomment the following three lines of code (using the command + / keys) to see how to make an alert pop up! -->
 
-<!-- <script>
-window.alert(5 + 6);
+ <script>
+window.alert("Hi! my name is Branden Powell");
 </script>
--->
+
 
 <!-- TO DO: Make "Hi! My name is" + your name appear in an alert from the page. 
 	***HINT: Remember, Javascript can only parse words when they are in 'string' format...d even punctuation (like quotation marks) must be inside of single quotes!!!***-->
@@ -138,11 +138,11 @@ window.alert(5 + 6);
 
  <img id="image" src="images/smiley.gif" width="160" height="120">
 
-<!-- <script>
+ <script>
 document.getElementById("image").src = "images/landscape.jpg";
 </script>
 
-<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p> -->
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p> 
 <br>
 <br>
 
@@ -158,6 +158,10 @@ var pictureChange = function() {
 	//here, we will grab the image id and change the picture
   document.getElementById('theImage').src = 'images/cat.gif';
 };
+    var pictureChange2 = function() {
+	//here, we will grab the image id and change the picture
+  document.getElementById('theImage2').src = 'images/banana1.gif';
+};
 </script>
 <!-- Here is the image tag- we will use this id  -->
 <img id="theImage" src='images/smiley.gif' width="160" height="120">
@@ -165,14 +169,14 @@ var pictureChange = function() {
 <p><input type="button" id="theButton" value="click me to change the picture!" onclick=pictureChange()></p>
 
 <br>
-<br>
+<br>l                                                                                          
 <!-- TO DO: 
 Find two images, and make your own picture switcher below
 -->
 
 <!-- YOUR CODE GOES HERE!  -->
-
-
+<img id="theImage2" src='images/imDead.jpg' width="170" height="120">
+<p><input type="button" id="theButton" value="click me to change the picture!" onclick=pictureChange2()></p>
 
 <!-- BACK TO THE ASSIGNMENT!  -->
 
@@ -191,18 +195,25 @@ var picsIndex = 0;
 var changePicture = function () {
 	//define our image variable- this will be the image id
   var img = document.getElementById('picture');
+}
+    
+var brandenPicture = function () {
+    var img = document.getElementById('picture2');
+    var myPictures2 = ['images/bandRecital.jpg', 'images/$10words.gif', 'images/cat.gif', 'images/landscape.jpg', 'images/smiley.jpg', 'images/wifiDown.jpg', 'images/questions.jpg', 'images/coffinSkate.jpg', 'images/banana1.gif', 'images/hackerman.gif'];
 
   //our index starts at O; we want to increment upward for as many images as there are in the myPictures array. If you had 5 pictures in your array, the line would read:
   // picsIndex = ++picsIndex % 5;
   picsIndex = ++picsIndex % 10;
+   // picsIndex2 = ++picsIndex % 10;
   //here, we set the image source equal to the index position in myPictures dictated by current count value of picsIndex
-  img.src = myPictures[picsIndex];
-};
+  img.src = myPictures2[picsIndex];
+}
 </script>
 
-<img id='picture' src='images/smiley.gif' width="160" height="120">
+<img id='picture2' src='images/smiley.gif' width="160" height="120">
 
-<p><input type="button" id='button2' value="click me to flip through some pictures!" onclick=changePicture()></p>
+<p><input type="button" id='button' value="click me to flip through some pictures!" onclick=brandenPicture()></p>
+    
 
 <br>
 <br>
@@ -212,6 +223,8 @@ Find some images, and make your own picture flipper below.
 -->
 
 <!-- YOUR CODE GOES HERE!  -->
+    
+    
 
 
 
